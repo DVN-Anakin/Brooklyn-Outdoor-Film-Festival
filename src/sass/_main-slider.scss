@@ -1,0 +1,121 @@
+
+.carousel-inner .carousel-item-right.active,
+.carousel-inner .carousel-item-next {
+  transform: translateX(33.33%);
+}
+
+.carousel-inner .carousel-item-left.active, 
+.carousel-inner .carousel-item-prev {
+  transform: translateX(-33.33%)
+}
+  
+.carousel-inner .carousel-item-right,
+.carousel-inner .carousel-item-left{ 
+  transform: translateX(0);
+}
+.main-slider {
+
+    .carousel-item {        
+
+        > div {
+            position: relative;
+            max-height: 331px;
+            overflow: hidden;
+        }
+
+        img {
+            width: 100%;
+
+            @media (min-width: 992px) {
+                width: unset;
+                height: 331px;
+                position: relative;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    .main-slider_img-wrap {
+
+        > div {
+            padding: 0 !important;
+            position: relative;
+            text-align: center;
+            height: 331px;
+            overflow: hidden;
+
+            &:hover {
+
+                .main-slider_img-caption {
+                    min-width: 100%;
+                    background-color: $c-orangered;
+                }
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            &:hover {
+
+                .main-slider_img-caption {
+                    min-width: 100%;
+                    background-color: $c-orangered;
+                }
+            }
+        }
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        width: 6%;
+    }
+    .carousel-control-next:hover {
+        background: linear-gradient(
+            to left,
+            $c-black,
+            transparent
+        );
+    }
+    .carousel-control-prev:hover {
+        background: linear-gradient(
+            to right,
+            $c-black,
+            transparent
+        );
+    }
+    .carousel-control-next-icon,
+    .carousel-control-prev-icon {
+        width: 40px;
+        height: 40px;
+        text-align: left;
+    }
+}
+.film-showcase_head {
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 2.4rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    font-weight: bold;
+}
+.film-showcase_lead {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.main-slider_img-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: inline-block;
+    min-width: 70%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: $c-blue;
+    color: $c-white;
+    padding: 0 10px;
+    transition: min-width 0.4s, background-color 0.4s;
+}

@@ -1,0 +1,43 @@
+.film-banner {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+
+    img {
+        position: relative;
+        display: inline-block;
+        margin: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        filter: grayscale(50%);
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $c-white;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        text-shadow: 0 0 30px rgba(0,0,0,0.8);
+    }
+
+    @media (min-width: 768px) {
+
+        h1 {
+            font-size: 4rem;
+        }
+    }
+
+    @media (min-width: 992px) {
+        height: 60vh;
+
+        h1 {
+            font-size: 4.5rem;
+        }
+    }
+}
